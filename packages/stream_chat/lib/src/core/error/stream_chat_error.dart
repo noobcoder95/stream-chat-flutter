@@ -97,7 +97,10 @@ class StreamChatNetworkError extends StreamChatError {
     return StreamChatNetworkError.raw(
       code: errorResponse?.code ?? -1,
       message:
-          errorResponse?.message ?? response?.statusMessage ?? error.message,
+          errorResponse?.message
+              ?? response?.statusMessage
+              ?? error.message
+              ?? 'Unknown Error',
       statusCode: errorResponse?.statusCode ?? response?.statusCode,
       data: errorResponse,
     )..stackTrace = error.stackTrace;

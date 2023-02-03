@@ -29,8 +29,10 @@ class StreamHttpClient {
         httpClient = dio ?? Dio() {
     httpClient
       ..options.baseUrl = _options.baseUrl
-      ..options.receiveTimeout = _options.receiveTimeout.inMilliseconds
-      ..options.connectTimeout = _options.connectTimeout.inMilliseconds
+      ..options.receiveTimeout = Duration(
+          milliseconds: _options.receiveTimeout.inMilliseconds,)
+      ..options.connectTimeout = Duration(
+          milliseconds: _options.connectTimeout.inMilliseconds,)
       ..options.queryParameters = {
         'api_key': apiKey,
         ..._options.queryParameters,
