@@ -27,4 +27,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   mocktail: ^0.3.0
+
+dependency_overrides:
+  dio: ^5.0.0
   
