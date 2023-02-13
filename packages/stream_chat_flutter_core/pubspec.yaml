@@ -28,9 +28,5 @@ dev_dependencies:
   mocktail: ^0.3.0
 
 dependency_overrides:
-  dio:
-    git:
-      url: https://github.com/cfug/diox
-      path: dio/
-      ref: dio
+  dio: ^5.0.0
 
